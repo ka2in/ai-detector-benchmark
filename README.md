@@ -19,16 +19,18 @@ Samples 2 and 3 were written for this test specifically. They are not real produ
 - Three tools: GPTZero (gptzero.me), Originality.ai (originality.ai), Scribbr (scribbr.com/ai-detector)
 - Free tiers only, no paid access, no account created beyond what each tool's free tier requires
 - All three samples are close in length (715–760 words) to keep length from confounding the comparison
-- Sample 3's edit rate was deliberately targeted at 15–20% word change, a threshold cited in AI-detection research as sufficient to disrupt a detector's confidence
-- Three of the nine results were independently re-run in a fresh browser session as a stability check. All three reproduced exactly.
+- Sample 3's edit rate was deliberately targeted at 15–20% word change, to test the commonly repeated claim that moderate human editing is enough to disrupt a detector's confidence
+- Two of the nine results were independently re-run in a fresh browser session as a stability check: Originality.ai on Sample 3 and Scribbr on Sample 1. Both returned identical scores. A third attempted re-run, GPTZero on Sample 3, was blocked by a signup requirement and not completed.
 
 ## Results
 
 | Sample | GPTZero | Originality.ai | Scribbr |
 |---|---|---|---|
-| Human control (Sample 1) | 99% Human | 94% conf., "likely original" | 27% AI-generated |
-| Raw AI (Sample 2) | 100% AI | 100% conf., "exceeds 15%" | 83% AI-generated |
-| Edited AI (Sample 3, 15.92% changed) | 100% AI, unchanged | 51% conf., "exceeds 15%" | 72% AI-generated |
+| Human control (Sample 1) | 99% Human | AI use 15% or less, 94% confidence | 27% AI-generated |
+| Raw AI (Sample 2) | 100% AI | AI use exceeds 15%, 100% confidence | 83% AI-generated |
+| Edited AI (Sample 3, 15.92% changed) | 100% AI, unchanged | AI use exceeds 15%, 51% confidence | 72% AI-generated |
+
+Originality.ai was run with its 15% AI allowance setting. It reports whether AI use appears to exceed that allowance, with a confidence score for that verdict. Scribbr gives no binary verdict, only a percentage split.
 
 ## Key findings
 
@@ -36,12 +38,12 @@ Samples 2 and 3 were written for this test specifically. They are not real produ
 
 2. **Scribbr was the only tool with a false-positive-adjacent result.** It flagged 27% of a genuinely human-written technical document as AI-generated, confirmed stable on a second run. The other two tools both read the same text as confidently human.
 
-3. **Vendor accuracy claims and independent, larger-scale benchmarks show meaningful gaps.** GPTZero advertises 99.3% accuracy; independent estimates outside controlled conditions cluster around 82-90%. Originality.ai advertises 99%+; one independent benchmark measured it at 76%. Scribbr publishes no headline accuracy figure at all.
+3. **Vendor accuracy claims and independent, larger-scale benchmarks show meaningful gaps.** GPTZero [advertises 99.3% accuracy](https://gptzero.me/news/ai-accuracy-benchmarking/); independent estimates outside controlled conditions [cluster around 82–90%](https://www.humanizedraft.com/blog/how-accurate-is-gptzero), per an aggregation published by a humanizer-tool vendor. Originality.ai [advertises 99%+](https://originality.ai/blog/ai-accuracy); [Scribbr's own detector comparison](https://www.scribbr.com/ai-tools/best-ai-detector/) measured it at 76%. Scribbr publishes no headline accuracy figure at all.
 
 ## Reproducing this test
 
 All three tools' free tiers are accessible without payment. Paste any of the three sample files into each tool directly and compare against the results above. Note that free-tier limits and interfaces may change over time; this test was run in August 2026.
 
-## License
+## Usage
 
-Sample text and this README are shared for reference and verification purposes.
+Sample text and this README are shared for reference and so readers can reproduce the test. Sample 1 is an excerpt of a published work by the repo author and is not licensed for reuse.
