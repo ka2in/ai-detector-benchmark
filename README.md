@@ -38,7 +38,7 @@ Originality.ai was run with its 15% AI allowance setting. It reports whether AI 
 
 2. **Scribbr was the only tool with a false-positive-adjacent result.** It flagged 27% of a genuinely human-written technical document as AI-generated, confirmed stable on a second run. The other two tools both read the same text as confidently human.
 
-3. **Vendor accuracy claims and independent, larger-scale benchmarks show meaningful gaps.** GPTZero [advertises 99.3% accuracy](https://gptzero.me/news/ai-accuracy-benchmarking/); independent estimates outside controlled conditions [cluster around 82–90%](https://www.humanizedraft.com/blog/how-accurate-is-gptzero), per an aggregation published by a humanizer-tool vendor. Originality.ai [advertises 99%+](https://originality.ai/blog/ai-accuracy); [Scribbr's own detector comparison](https://www.scribbr.com/ai-tools/best-ai-detector/) measured it at 76%. Scribbr publishes no headline accuracy figure at all.
+3. **Vendor accuracy claims and independent, larger-scale benchmarks show meaningful gaps.** GPTZero [advertises 99.3% accuracy](https://gptzero.me/news/ai-accuracy-benchmarking/); independent estimates outside controlled conditions [cluster around 82–90%](https://www.humanizedraft.com/blog/how-accurate-is-gptzero), per an aggregation published by a humanizer-tool vendor. Originality.ai [advertises 99%+](https://originality.ai/blog/ai-accuracy); [Scribbr's own detector comparison](https://www.scribbr.com/ai-tools/best-ai-detector/) measured it at 76%. Scribbr publishes no headline accuracy figure in its product FAQ.
 
 ## Reproducing this test
 
